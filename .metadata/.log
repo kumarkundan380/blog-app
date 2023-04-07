@@ -1,0 +1,181 @@
+
+!ENTRY org.eclipse.ui.ide 4 4 2023-04-07 12:16:17.783
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 4 1 2023-04-07 12:16:17.785
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 4 568 2023-04-07 12:16:17.785
+!MESSAGE Could not write workspace metadata '/home/kundan/Blog-App/.metadata/.plugins/org.eclipse.core.resources/.root/5.tree'.
+!STACK 0
+java.io.FileNotFoundException: /home/kundan/Blog-App/.metadata/.plugins/org.eclipse.core.resources/.root/5.tree (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:291)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:234)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+	at org.eclipse.core.internal.localstore.SafeFileOutputStream.<init>(SafeFileOutputStream.java:55)
+	at org.eclipse.core.internal.resources.SaveManager.saveTree(SaveManager.java:1381)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1168)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2354)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$1(IDEWorkbenchAdvisor.java:554)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.epp.mpc.ui 1 2 2023-04-07 12:16:18.089
+!MESSAGE Skipping update check for repository 'https://download.eclipse.org/egit/updates' - failed to read repository. Affected entries: 
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://download.eclipse.org/egit/updates/artifacts.xml.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:248)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.getLocalFile(SimpleArtifactRepositoryFactory.java:68)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.load(SimpleArtifactRepositoryFactory.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.load(SimpleArtifactRepositoryFactory.java:80)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:779)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:119)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:447)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:230)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Artifact.loadRepository(CachingRepositoryManager.java:586)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:131)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:125)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.lambda$12(MarketplaceCatalog.java:338)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: java.lang.IllegalStateException: Connection pool shut down
+	at org.apache.http.util.Asserts.check(Asserts.java:34)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.requestConnection(PoolingHttpClientConnectionManager.java:269)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:176)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:248)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2023-04-07 12:16:18.090
+!MESSAGE Unable to read repository at https://download.eclipse.org/egit/updates/artifacts.xml.
+!STACK 0
+java.lang.IllegalStateException: Connection pool shut down
+	at org.apache.http.util.Asserts.check(Asserts.java:34)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.requestConnection(PoolingHttpClientConnectionManager.java:269)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:176)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:248)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.epp.mpc.ui 1 0 2023-04-07 12:16:18.090
+!MESSAGE EGit - Git Integration for Eclipse 6.0.0
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-04-07 12:16:18.723
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.444
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.445
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.445
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.446
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.447
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.447
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.448
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.448
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.448
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.449
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.449
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.450
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.450
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.451
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.451
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.452
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.452
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.452
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.453
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.453
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.454
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.454
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.455
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.455
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.456
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.457
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.457
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.458
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.459
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.459
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.460
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.461
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.461
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-04-07 12:16:19.462
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1
